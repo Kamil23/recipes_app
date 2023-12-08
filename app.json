@@ -16,7 +16,8 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "dietanaluzie"
+      "bundleIdentifier": "dietanaluzie",
+      "buildNumber": "1.0.1"
     },
     "android": {
       "adaptiveIcon": {
