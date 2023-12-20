@@ -19,7 +19,7 @@ export default function Categories({ activeCategory, handleCategoryChange, categ
       >
         {filteredCategories.map((cat, index) => {
           const isActiveCategory = activeCategory === cat.node.name;
-          const activeButtonStyle = isActiveCategory ? "bg-amber-400" : "bg-white";
+          const activeButtonStyle = isActiveCategory ? "bg-secondary" : "bg-white";
           const imageSourceUrl = cat.node.posts.edges[0].node.featuredImage.node.sourceUrl;
           return (
             <TouchableOpacity

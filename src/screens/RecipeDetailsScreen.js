@@ -5,14 +5,14 @@ import {
   View,
   Text,
   useWindowDimensions,
+  Image,
+  StyleSheet,
 } from "react-native";
 import { CachedImage } from "../helpers/image";
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
-import { ChevronLeftIcon, ClockIcon } from "react-native-heroicons/outline";
-import { HeartIcon } from "react-native-heroicons/solid";
 import { useEffect, useState, memo } from "react";
 import { useNavigation } from "@react-navigation/core";
 import { getSingleRecipeBySlug } from "../api/graphql";
@@ -20,6 +20,13 @@ import Loading from "../components/loading";
 import RenderHtml from "react-native-render-html";
 import { extractNumericPart } from "../helpers/helpers";
 import Animated, { FadeIn, FadeInDown } from "react-native-reanimated";
+
+const styles = StyleSheet.create({
+  arrow: {
+    width: 25,
+    height: 25,
+  },
+});
 
 export default function RecipeDetailsScreen(props) {
   const item = props.route.params;
@@ -79,7 +86,10 @@ export default function RecipeDetailsScreen(props) {
           className="p-2 rounded-full ml-5 bg-white"
           onPress={() => navigation.goBack()}
         >
-          <ChevronLeftIcon size={hp(3.5)} strokeWidth={4.5} color="#fbbf24" />
+          <Image
+            source={require("../../assets/arrow-left.png")}
+            style={styles.arrow}
+          />
         </TouchableOpacity>
         {/* <TouchableOpacity
           className="p-2 rounded-full mr-5 bg-white"
@@ -111,7 +121,10 @@ export default function RecipeDetailsScreen(props) {
 
           {/* categories */}
           <Animated.ScrollView
-            entering={FadeInDown.delay(300).duration(700).springify().damping(12)}
+            entering={FadeInDown.delay(300)
+              .duration(700)
+              .springify()
+              .damping(12)}
             horizontal
             showsHorizontalScrollIndicator={false}
             className="space-x-1 mb-6"

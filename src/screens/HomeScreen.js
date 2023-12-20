@@ -5,11 +5,8 @@ import {
   ScrollView,
   Image,
   Text,
-  TextInput,
-  SafeAreaView,
 } from "react-native";
 import { heightPercentageToDP as hp } from "react-native-responsive-screen";
-import { BellIcon, MagnifyingGlassIcon } from "react-native-heroicons/outline";
 import Categories from "../components/categories";
 import { getAllCategories, getRecipesByCategoryName, getRecipesByQuery } from "../api/graphql";
 import Recipes from "../components/recipes";
@@ -55,7 +52,7 @@ const HomeScreen = () => {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-white">
+    <View className="flex-1 pt-16 bg-white">
       <StatusBar style="auto" />
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -65,14 +62,13 @@ const HomeScreen = () => {
       >
         <View className="mx-4 flex-row justify-between items-center mb-2">
           <Image
-            source={require("../../assets/avatar.png")}
+            source={require("../../assets/icon.png")}
             style={{ height: hp(5), width: hp(5) }}
           />
-          <BellIcon size={hp(4)} color="gray" />
         </View>
         <View className="mx-4 space-y-2 mb-2">
           <Text className="font-bold" style={{ fontSize: hp(3) }}>
-            {/* Cześć <Text className="text-amber-400">Kamil</Text> */}
+            {/* Cześć <Text className="text-secondary">Kamil</Text> */}
             Cześć!
           </Text>
           <Text className="text-neutral-600">Na co masz dziś ochotę?</Text>
@@ -113,7 +109,7 @@ const HomeScreen = () => {
           />
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 

@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "recipes_app",
-    "slug": "recipes_app",
-    "version": "1.0.0",
+    "name": "Dieta na luzie",
+    "slug": "dieta-na-luzie",
+    "version": "1.0.4",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -17,7 +17,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "dietanaluzie",
-      "buildNumber": "1.0.2"
+      "buildNumber": "1.0.4"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,12 +25,9 @@
         "backgroundColor": "#ffffff"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
     "extra": {
       "eas": {
-        "projectId": "c89a9388-8729-45ef-aeab-fc5db9a301c9"
+        "projectId": "009ddebe-df70-41af-b562-f7305743bd19"
       }
     }
   }
