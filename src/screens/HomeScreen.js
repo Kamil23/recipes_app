@@ -52,7 +52,7 @@ const HomeScreen = () => {
   };
 
   return (
-    <View className="flex-1 pt-16 bg-white">
+    <View className="flex-1 bg-white">
       <StatusBar style="auto" />
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -60,7 +60,7 @@ const HomeScreen = () => {
         className="space-y-6"
         horizontal={false}
       >
-        <View className="mx-4 flex-row justify-between items-center mb-2">
+        <View className="mx-4 mt-16 flex-row justify-between items-center mb-2">
           <Image
             source={require("../../assets/icon.png")}
             style={{ height: hp(5), width: hp(5) }}

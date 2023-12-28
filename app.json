@@ -2,7 +2,7 @@
   "expo": {
     "name": "Dieta na luzie",
     "slug": "dieta-na-luzie",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -17,7 +17,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "dietanaluzie",
-      "buildNumber": "1.0.4"
+      "buildNumber": "1.0.6"
     },
     "android": {
       "adaptiveIcon": {

@@ -24,7 +24,7 @@ export default function WelcomeScreen() {
       <Animated.View style={{ transform: [{ scale: scaleLogo }] }}>
         <Image
           source={require("../../assets/dieta-na-luzie-logo.png")}
-          style={{ width: wp(70) }}
+          style={{ width: wp(80) }}
         />
       </Animated.View>
     </View>

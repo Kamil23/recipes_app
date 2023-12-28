@@ -8,7 +8,7 @@ import Animated, { FadeInDown } from "react-native-reanimated";
 import { CachedImage } from "../helpers/image";
 
 export default function Categories({ activeCategory, handleCategoryChange, categories }) {
-  const filteredCategories = categories.filter((cat) => cat.node.name !== "Bez kategorii");
+  const filteredCategories = categories.filter((cat) => cat.node.name !== "Bez kategorii").sort((a, b) => b.node.name.localeCompare(a.node.name));
   return (
     <Animated.View entering={FadeInDown.duration(500).springify()}>
       <ScrollView
